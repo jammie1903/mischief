@@ -7,20 +7,24 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rachmie.timetravel.ControllerMain">
    <center>
       <StackPane alignment="TOP_LEFT" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="wormhole" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@wormhole.jpg" />
                </image>
             </ImageView>
-            <HBox alignment="CENTER" fillHeight="false" maxHeight="200.0" maxWidth="200.0" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 100; -fx-background-color: lightblue; -fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 100;" StackPane.alignment="CENTER">
+            <VBox alignment="CENTER" fillWidth="false" maxHeight="200.0" maxWidth="200.0" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" spacing="5.0" style="-fx-background-radius: 100; -fx-background-color: lightblue; -fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 100;" StackPane.alignment="CENTER">
                <children>
-                  <DatePicker prefWidth="150.0" />
+                  <DatePicker fx:id="dateControl" prefWidth="150.0" />
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#startTimeTravel" text="Go!" />
                </children>
-            </HBox>
+               <padding>
+                  <Insets top="18.0" />
+               </padding>
+            </VBox>
          </children>
       </StackPane>
    </center>
