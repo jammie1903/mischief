@@ -1,11 +1,27 @@
 package com.rachmie.timetravel;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+
+@XStreamAlias("event")
 public class TimeEvent {
   private String eventText;
   private Date eventDate;
   private String eventSound;
+
+  @XStreamAlias("events")
+  public static class EventList {
+    @XStreamImplicit(itemFieldName = "event")
+    private List events = new ArrayList();
+
+    public List<TimeEvent> getEvents() {
+      return events;
+    }
+  }
 
   /**
    * @return the eventText

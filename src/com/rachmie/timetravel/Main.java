@@ -7,17 +7,18 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    public static void main(String[] args) {
-        launch(args);
-    }
+  public static void main(String[] args) {
+    launch(args);
+  }
 
-    @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/mischief.fxml"));
-        Scene scene = new Scene(root);
-        stage.setTitle("Time Machine");
-        stage.setResizable(false);
-        stage.setScene(scene);
-        stage.show();
-    }
+  @Override
+  public void start(Stage stage) throws Exception {
+    Parent root = FXMLLoader.load(getClass().getResource("/mischief.fxml"));
+    Scene scene = new Scene(root);
+    stage.setTitle("Time Machine");
+    stage.setResizable(false);
+    stage.setScene(scene);
+    stage.show();
+    TimeTravelController.getInstance();
+  }
 }
