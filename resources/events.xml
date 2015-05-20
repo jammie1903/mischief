@@ -40,6 +40,11 @@
     <eventSound></eventSound>
   </event>
   <event>
+    <eventText>Seans wins an award for collaboration.</eventText>
+    <eventDate>02/2015</eventDate>
+    <eventSound>applause</eventSound>
+  </event>
+  <event>
     <eventText>During a team meeting, a loud and suspiciously smelly noise erupts from Sean's location. No one mentions it though.</eventText>
     <eventDate>06/2015</eventDate>
     <eventSound></eventSound>
@@ -61,7 +66,7 @@
     <eventSound></eventSound>
   </event>
   <event>
-    <eventText>Visit Graz with her new baby. Apparently she has given it the middle name SEan in the hope it may turn out as helpful as you.</eventText>
+    <eventText>Visit Graz with her new baby. Apparently she has given it the middle name Sean in the hope it may turn out as helpful as you.</eventText>
     <eventDate>10/2015</eventDate>
     <eventSound></eventSound>
   </event>
@@ -115,8 +120,6 @@
     <eventDate>01/2093</eventDate>
     <eventSound></eventSound>
   </event>
-
-
   <event>
     <eventText>Seans slips on ice and strains his right wrist, jokes follow.</eventText>
     <eventDate>01/2017</eventDate>
