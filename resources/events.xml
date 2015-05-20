@@ -2,32 +2,32 @@
   <event>
     <eventText>Jamie and Rachel invent a time machine as a wedding gift to Sean.</eventText>
     <eventDate>05/2015</eventDate>
-    <eventSound></eventSound>
+    <eventSound>wedding</eventSound>
   </event>
   <event>
     <eventText>Sean was born. This day will come to be known around the world as one of the most important dates of the modern world.</eventText>
     <eventDate>07/1991</eventDate>
-    <eventSound></eventSound>
+    <eventSound>Happy_Birthday</eventSound>
   </event>
   <event>
     <eventText>Sean turns one. Your mum notices you are not like all the other children at baby groups, she can't quite put her finger on why though.</eventText>
     <eventDate>07/1992</eventDate>
-    <eventSound></eventSound>
+    <eventSound>Happy_Birthday</eventSound>
   </event>
   <event>
     <eventText>You are 2 Sean. At this point you managed to type your first computer program...10 goto 20, 20 print "hello".</eventText>
     <eventDate>07/1993</eventDate>
-    <eventSound></eventSound>
+    <eventSound>Happy_Birthday</eventSound>
   </event>
   <event>
     <eventText>You start to really appreciate your birthday presents, especially the ones with batteries in.</eventText>
     <eventDate>07/1994</eventDate>
-    <eventSound></eventSound>
+    <eventSound>Happy_Birthday</eventSound>
   </event>
   <event>
     <eventText>This is the turning point in your life. You know what you want from your future. You just need to get a bit older...</eventText>
     <eventDate>07/1995</eventDate>
-    <eventSound></eventSound>
+    <eventSound>Happy_Birthday</eventSound>
   </event>
   <event>
     <eventText>Starting school. This is a very scary month.</eventText>
@@ -47,7 +47,7 @@
   <event>
     <eventText>During a team meeting, a loud and suspiciously smelly noise erupts from Sean's location. No one mentions it though.</eventText>
     <eventDate>06/2015</eventDate>
-    <eventSound></eventSound>
+    <eventSound>wind</eventSound>
   </event>
   <event>
     <eventText>Rachel helps Sean out with a particularly tedious issue.... should he make a toast to the bridesmaids in his speech or is that the best mans job? </eventText>
@@ -58,7 +58,7 @@
     <eventText>Congratulations!! The most amazing day of your life. You marry your childhood sweetheart in front of hundreds of tearful onlookers (who the heck invited all of
       them...Abu...Facebook?)</eventText>
     <eventDate>08/2015</eventDate>
-    <eventSound></eventSound>
+    <eventSound>wedding</eventSound>
   </event>
   <event>
     <eventText>Still exhausted from married life you accidently say something you shouldn't to HR team.</eventText>
@@ -108,7 +108,7 @@
   <event>
     <eventText>Sean goes to Daryl's retirement party and shows off his new moves on the dance floor.</eventText>
     <eventDate>10/2042</eventDate>
-    <eventSound></eventSound>
+    <eventSound>applause</eventSound>
   </event>
   <event>
     <eventText>Jamie and Sean enjoy another game of Destiny on their yBox 9. </eventText>
@@ -128,12 +128,12 @@
   <event>
     <eventText>Rachel Turns "21"</eventText>
     <eventDate>02/2017</eventDate>
-    <eventSound></eventSound>
+    <eventSound>happy_birthday</eventSound>
   </event>
   <event>
     <eventText>Jamie Turns 25, Sean gives him lots of money to celebrate.</eventText>
     <eventDate>03/2017</eventDate>
-    <eventSound></eventSound>
+    <eventSound>happy_birthday</eventSound>
   </event>
   <event>
     <eventText>Novacroft members put out a petition to stop Abus Advertising efforts.</eventText>
@@ -141,19 +141,19 @@
     <eventSound></eventSound>
   </event>
   <event>
-    <eventText>Novacroft hires a new Software Delivery Manager.</eventText>
+    <eventText>A new Software Delivery Manager starts work.</eventText>
     <eventDate>05/2017</eventDate>
     <eventSound></eventSound>
   </event>
   <event>
-    <eventText>Novacroft's new Software Delivery Manager resigns.</eventText>
+    <eventText>The new Software Delivery Manager resigns, he can't take the pace.</eventText>
     <eventDate>06/2017</eventDate>
     <eventSound></eventSound>
   </event>
   <event>
     <eventText>Sean turns 26, Daryl sends him to ITSO for the day to celebrate.</eventText>
     <eventDate>07/2017</eventDate>
-    <eventSound></eventSound>
+    <eventSound>happy_birthday</eventSound>
   </event>
   <event>
     <eventText>Destiny 2 comes out, turns out its the exact same game but with lv 35 as the max.</eventText>
@@ -161,7 +161,7 @@
     <eventSound></eventSound>
   </event>
   <event>
-    <eventText>Peak hits at Novacroft. Graz escapes on maternity leave.</eventText>
+    <eventText>Peak hits at Novacroft. Graz escapes on maternity leave (again).</eventText>
     <eventDate>09/2017</eventDate>
     <eventSound></eventSound>
   </event>
@@ -176,11 +176,16 @@
     <eventSound></eventSound>
   </event>
   <event>
-    <eventText>Chirstmas arrives, Rachel puts on her pantomime with Sean playing the role of Hazel.</eventText>
+    <eventText>Christmas arrives, Rachel puts on her pantomime with Sean playing the role of Hazel.</eventText>
     <eventDate>12/2017</eventDate>
     <eventSound></eventSound>
   </event>
   <randomEvent>Bit of a boring month really...</randomEvent>
   <randomEvent>Not a lot going on here...</randomEvent>
+  <randomEvent>Relaxing month...</randomEvent>
+  <randomEvent>A lucky month for you...</randomEvent>
+  <randomEvent>A lot of smiling happens this month...</randomEvent>
+  <randomEvent>Rushed off your feet...</randomEvent>
+  <randomEvent>This month passes by so fast...</randomEvent>
 
 </events>
