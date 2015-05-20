@@ -20,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -27,115 +28,141 @@ import javafx.util.Duration;
 
 public class ControllerMain implements Initializable {
 
-  @FXML
-  private TextField yearEntry;
+    @FXML
+    private TextField yearEntry;
 
-  @FXML
-  private ComboBox<String> monthSelector;
+    @FXML
+    private ComboBox<String> monthSelector;
 
-  @FXML
-  private Label eventText;
+    @FXML
+    private Label eventText;
 
-  @FXML
-  private ImageView wormhole;
+    @FXML
+    private ImageView wormhole;
 
-  @FXML
-  private VBox messagePane;
+    @FXML
+    private ImageView resultImage;
 
-  @FXML
-  private StackPane timeMachineResultPane;
+    @FXML
+    private VBox messagePane;
 
-  @FXML
-  private Button goButton;
+    @FXML
+    private StackPane timeMachineResultPane;
 
-  @FXML
-  private Button goAgainButton;
+    @FXML
+    private Button goButton;
 
-  private Map<String, Integer> months = new HashMap<>();
+    @FXML
+    private Button goAgainButton;
 
-  @FXML
-  void startTimeTravel(ActionEvent event) {
+    private Map<String, Integer> months = new HashMap<>();
 
-    boolean success = yearIsValid();
+    private static final int MIN_MONTH = 1991 * 12 + 6;
+    private static final int MAX_MONTH = 2093 * 12;
+    private static final String WORKING_IMAGE = "/time_machine_working.jpg";
+    private static final String BROKEN_IMAGE = "/time_machine_broken.jpg";
 
-    LocalDate.parse("21/12/2014", DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-    RotateTransition rt = new RotateTransition(Duration.millis(4000), wormhole);
-    rt.setByAngle(720);
-    rt.setAutoReverse(false);
-    rt.setInterpolator(Interpolator.EASE_BOTH);
-    rt.play();
+    @FXML
+    void startTimeTravel(ActionEvent event) {
 
-    messagePane.setOpacity(0);
-    timeMachineResultPane.setOpacity(0);
+        if (dateIsValid()) {
+            TimeEvent timeEvent = TimeTravelController.getInstance().getEvent(months.get(monthSelector.getValue()), Integer.parseInt(yearEntry.getText()));
+            if (timeEvent != null) {
+                showEvent(timeEvent);
+            } else {
+                popupAngryMechanic();
+            }
+        } else {
+            popupAngryMechanic();
+        }
 
-    goButton.setDisable(true);
-    goButton.setDefaultButton(false);
-    goAgainButton.setDisable(true);
-    goAgainButton.setDefaultButton(true);
+        LocalDate.parse("21/12/2014", DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        RotateTransition rt = new RotateTransition(Duration.millis(4000), wormhole);
+        rt.setByAngle(720);
+        rt.setAutoReverse(false);
+        rt.setInterpolator(Interpolator.EASE_BOTH);
+        rt.play();
 
-    FadeTransition fade = new FadeTransition(Duration.millis(1000), timeMachineResultPane);
-    fade.setDelay(Duration.millis(2000));
-    fade.setFromValue(0);
-    fade.setToValue(1);
-    fade.setInterpolator(Interpolator.LINEAR);
-    fade.play();
+        messagePane.setOpacity(0);
+        timeMachineResultPane.setOpacity(0);
 
-    fade = new FadeTransition(Duration.millis(1000), messagePane);
-    fade.setDelay(Duration.millis(3000));
-    fade.setFromValue(0);
-    fade.setToValue(1);
-    fade.setInterpolator(Interpolator.LINEAR);
-    fade.play();
+        goButton.setDisable(true);
+        goButton.setDefaultButton(false);
+        goAgainButton.setDisable(true);
+        goAgainButton.setDefaultButton(true);
 
-    new Timer().schedule(new TimerTask() {
-      @Override
-      public void run() {
-        timeMachineResultPane.setMouseTransparent(false);
-        goAgainButton.setDisable(false);
-      }
-    }, 4000);
-  }
+        FadeTransition fade = new FadeTransition(Duration.millis(1000), timeMachineResultPane);
+        fade.setDelay(Duration.millis(2000));
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.setInterpolator(Interpolator.LINEAR);
+        fade.play();
 
-  @FXML
-  void resetTimeMachine(ActionEvent event) {
-    timeMachineResultPane.setMouseTransparent(true);
-    goAgainButton.setDisable(true);
-    goAgainButton.setDefaultButton(false);
-    goButton.setDisable(false);
-    goButton.setDefaultButton(true);
+        fade = new FadeTransition(Duration.millis(1000), messagePane);
+        fade.setDelay(Duration.millis(3000));
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.setInterpolator(Interpolator.LINEAR);
+        fade.play();
 
-    monthSelector.setValue(null);
-    yearEntry.setText(null);
-
-    FadeTransition fade = new FadeTransition(Duration.millis(1000), timeMachineResultPane);
-    fade.setDelay(Duration.millis(1000));
-    fade.setFromValue(1);
-    fade.setToValue(0);
-    fade.setInterpolator(Interpolator.LINEAR);
-    fade.play();
-
-  }
-
-  private void popupAngryMechanic() {
-    // TODO Auto-generated method stub
-
-  }
-
-  private boolean yearIsValid() {
-    try {
-      int year = Integer.parseInt(yearEntry.getText());
-      // july 1991 - january - 2093
-      return year > 1990 && year < 2094;
-    } catch (Exception ex) {
-      return false;
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                timeMachineResultPane.setMouseTransparent(false);
+                goAgainButton.setDisable(false);
+            }
+        }, 4000);
     }
-  }
 
-  @Override
-  public void initialize(URL arg0, ResourceBundle arg1) {
-    for (int c = 0; c < 12; c++) {
-      monthSelector.getItems().add(new DateFormatSymbols().getMonths()[c]);
-      months.put(new DateFormatSymbols().getMonths()[c], c);
+    @FXML
+    void resetTimeMachine(ActionEvent event) {
+        timeMachineResultPane.setMouseTransparent(true);
+        goAgainButton.setDisable(true);
+        goAgainButton.setDefaultButton(false);
+        goButton.setDisable(false);
+        goButton.setDefaultButton(true);
+
+        monthSelector.setValue(null);
+        yearEntry.setText(null);
+
+        FadeTransition fade = new FadeTransition(Duration.millis(1000), timeMachineResultPane);
+        fade.setDelay(Duration.millis(1000));
+        fade.setFromValue(1);
+        fade.setToValue(0);
+        fade.setInterpolator(Interpolator.LINEAR);
+        fade.play();
+
     }
-  }
+
+    private void popupAngryMechanic() {
+        eventText.setText("What the heck did you type in? You broke the time machine!");
+        resultImage.setImage(new Image(BROKEN_IMAGE));
+    }
+
+    private void showEvent(TimeEvent event) {
+        eventText.setText(event.getEventText());
+        resultImage.setImage(new Image(WORKING_IMAGE));
+    }
+
+    private boolean dateIsValid() {
+        try {
+            int month = months.get(monthSelector.getValue());
+            int year = Integer.parseInt(yearEntry.getText());
+
+            int totalMonths = year * 12 + month - 1;
+
+            // july 1991 - january - 2093
+            return totalMonths >= MIN_MONTH && totalMonths <= MAX_MONTH;
+        } catch (Exception ex) {
+            return false;
+        }
+    }
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        for (int c = 0; c < 12; c++) {
+            monthSelector.getItems().add(new DateFormatSymbols().getMonths()[c]);
+            months.put(new DateFormatSymbols().getMonths()[c], c + 1);
+        }
+    }
 }

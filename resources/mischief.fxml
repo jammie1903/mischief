@@ -39,7 +39,7 @@
             </StackPane>
             <StackPane fx:id="timeMachineResultPane" mouseTransparent="true" opacity="0.0" prefHeight="150.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="resultImage" fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@time_machine_working.jpg" />
                      </image>
