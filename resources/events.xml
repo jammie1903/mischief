@@ -1,21 +1,57 @@
 <events>
-	<event>
-		<eventText>Jamie and Rachel invent a time machine as a wedding gift to Sean.</eventText>
-		<eventDate>05/2015</eventDate>
-		<eventSound></eventSound>
-	</event>
   <event>
-    <eventText>During a team meeting, a loud and suspiciously smelly noise erupts from Sean's location.  No one mentions it though.</eventText>
+    <eventText>Jamie and Rachel invent a time machine as a wedding gift to Sean.</eventText>
+    <eventDate>05/2015</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Sean was born. This day will come to be known around the world as one of the most important dates of the modern world.</eventText>
+    <eventDate>07/1991</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Sean turns one. Your mum notices you are not like all the other children at baby groups, she can't quite put her finger on why though.</eventText>
+    <eventDate>07/1992</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>You are 2 Sean. At this point you managed to type your first computer program...10 goto 20, 20 print "hello".</eventText>
+    <eventDate>07/1993</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>You start to really appreciate your birthday presents, especially the ones with batteries in.</eventText>
+    <eventDate>07/1994</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>This is the turning point in your life. You know what you want from your future. You just need to get a bit older...</eventText>
+    <eventDate>07/1995</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Starting school. This is a very scary month.</eventText>
+    <eventDate>09/1995</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Lyndsay is beginning to stand out in your life as someone who actually understands you and appreciates what makes you tick.</eventText>
+    <eventDate>04/2004</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>During a team meeting, a loud and suspiciously smelly noise erupts from Sean's location. No one mentions it though.</eventText>
     <eventDate>06/2015</eventDate>
     <eventSound></eventSound>
   </event>
-   <event>
+  <event>
     <eventText>Rachel helps Sean out with a particularly tedious issue.... should he make a toast to the bridesmaids in his speech or is that the best mans job? </eventText>
     <eventDate>07/2015</eventDate>
     <eventSound></eventSound>
   </event>
-   <event>
-    <eventText>Congratulations!! The most amazing day of your life.  You marry your childhood sweetheart in front of hundreds of tearful onlookers (who the heck invited all of them...Abu...Facebook?)</eventText>
+  <event>
+    <eventText>Congratulations!! The most amazing day of your life. You marry your childhood sweetheart in front of hundreds of tearful onlookers (who the heck invited all of
+      them...Abu...Facebook?)</eventText>
     <eventDate>08/2015</eventDate>
     <eventSound></eventSound>
   </event>
@@ -25,23 +61,23 @@
     <eventSound></eventSound>
   </event>
   <event>
-    <eventText>Visit Graz with her new baby.  Apparently she has given it the middle name SEan in the hope it may turn out as helpful as you.</eventText>
+    <eventText>Visit Graz with her new baby. Apparently she has given it the middle name SEan in the hope it may turn out as helpful as you.</eventText>
     <eventDate>10/2015</eventDate>
     <eventSound></eventSound>
   </event>
-   <event>
+  <event>
     <eventText>You get so fed up with one of the testers you shut them in a cupboard over the weekend and play loud rock music so their screams cannot be heard.</eventText>
     <eventDate>11/2015</eventDate>
     <eventSound></eventSound>
   </event>
-   <event>
-    <eventText>Stuart comes to visit you as he misses your bro-mance so badly.  He is wearing a dress and you find that a bit awkward....</eventText>
+  <event>
+    <eventText>Stuart comes to visit you as he misses your bro-mance so badly. He is wearing a dress and you find that a bit awkward....</eventText>
     <eventDate>12/2015</eventDate>
     <eventSound></eventSound>
   </event>
   <event>
-    <eventText></eventText>
-    <eventDate>05/2015</eventDate>
+    <eventText>This month sees you buying chocolate for everyone you know as a token of appreciation.</eventText>
+    <eventDate>05/2016</eventDate>
     <eventSound></eventSound>
   </event>
   <event>
@@ -60,7 +96,7 @@
     <eventSound></eventSound>
   </event>
   <event>
-    <eventText>Sean takes up a new hobby - flower arranging.  Using his new skills he makes a bouquet for Abu's wife when she safely delivers twins.</eventText>
+    <eventText>Sean takes up a new hobby - flower arranging. Using his new skills he makes a bouquet for Abu's wife when she safely delivers twins.</eventText>
     <eventDate>04/2025</eventDate>
     <eventSound></eventSound>
   </event>
@@ -69,5 +105,79 @@
     <eventDate>10/2042</eventDate>
     <eventSound></eventSound>
   </event>
-  
+  <event>
+    <eventText>Jamie and Sean enjoy another game of Destiny on their yBox 9. </eventText>
+    <eventDate>10/2092</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Whilst laughing at his great grandaughters joke, Sean chokes on his false teeth and stops breathing. RIP. </eventText>
+    <eventDate>01/2093</eventDate>
+    <eventSound></eventSound>
+  </event>
+
+
+  <event>
+    <eventText>Seans slips on ice and strains his right wrist, jokes follow.</eventText>
+    <eventDate>01/2017</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Rachel Turns "21"</eventText>
+    <eventDate>02/2017</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Jamie Turns 25, Sean gives him lots of money to celebrate.</eventText>
+    <eventDate>03/2017</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Novacroft members put out a petition to stop Abus Advertising efforts.</eventText>
+    <eventDate>04/2017</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Novacroft hires a new Software Delivery Manager.</eventText>
+    <eventDate>05/2017</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Novacroft's new Software Delivery Manager resigns.</eventText>
+    <eventDate>06/2017</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Sean turns 26, Daryl sends him to ITSO for the day to celebrate.</eventText>
+    <eventDate>07/2017</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Destiny 2 comes out, turns out its the exact same game but with lv 35 as the max.</eventText>
+    <eventDate>08/2017</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Peak hits at Novacroft. Graz escapes on maternity leave.</eventText>
+    <eventDate>09/2017</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Sean held another R&amp;D collaboration session, as usual, I.T. wasn't happy about it.</eventText>
+    <eventDate>10/2017</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Rachel spent the month complaining about her heating.</eventText>
+    <eventDate>11/2017</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <event>
+    <eventText>Chirstmas arrives, Rachel puts on her pantomime with Sean playing the role of Hazel.</eventText>
+    <eventDate>12/2017</eventDate>
+    <eventSound></eventSound>
+  </event>
+  <randomEvent>Bit of a boring month really...</randomEvent>
+  <randomEvent>Not a lot going on here...</randomEvent>
+
 </events>
