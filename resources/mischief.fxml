@@ -9,19 +9,56 @@
 
 <BorderPane style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rachmie.timetravel.ControllerMain">
    <center>
-      <StackPane alignment="TOP_LEFT" BorderPane.alignment="CENTER">
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="wormhole" fitHeight="699.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@wormhole.jpg" />
-               </image>
-            </ImageView>
-            <HBox alignment="CENTER" fillHeight="false" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" spacing="5.0" style="-fx-background-radius: 150; -fx-background-color: lightblue; -fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 150;" StackPane.alignment="CENTER">
+            <StackPane alignment="TOP_LEFT">
                <children>
-                  <ComboBox fx:id="monthSelector" prefWidth="100.0" promptText="Month" />
-                  <TextField fx:id="yearEntry" prefWidth="80.0" promptText="Year" />
+                  <ImageView fx:id="wormhole" fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@wormhole.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" fillWidth="false" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" spacing="20.0" style="-fx-background-radius: 150; -fx-background-color: lightblue; -fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 150;" StackPane.alignment="CENTER">
+                     <children>
+						<HBox spacing="5.0">
+   <children>
+   							<ComboBox fx:id="monthSelector" prefWidth="100.0" promptText="Month" />
+   							<TextField fx:id="yearEntry" prefWidth="80.0" promptText="Year" />
+   </children>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+						</HBox>
+						<Button defaultButton="true" mnemonicParsing="false" onAction="#startTimeTravel" text="Go!" />
+                     </children>
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                  </VBox>
                </children>
-            </HBox>
+            </StackPane>
+            <StackPane fx:id="timeMachineResultPane" mouseTransparent="true" opacity="0.0" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="wormhole1" fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@time_machine_working.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox fx:id="messagePane" alignment="CENTER" maxHeight="180.0" minHeight="180.0" prefHeight="180.0" spacing="20.0" style="-fx-background-color: rgbaa(255,255,255,0.75);">
+                     <children>
+                        <Label fx:id="eventText" maxHeight="100.0" minHeight="100.0" prefHeight="100.0" text="On this day, sean was promoted to president of the world for his victories in itso, his first demand was to ban the the phrase 'Work smarter, not harder'" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#resetTimeMachine" text="Go Again!" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </StackPane>
          </children>
       </StackPane>
    </center>
