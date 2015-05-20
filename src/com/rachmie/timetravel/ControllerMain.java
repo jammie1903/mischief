@@ -7,12 +7,16 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 
+import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
 import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -30,9 +34,6 @@ public class ControllerMain implements Initializable {
     private ComboBox<String> monthSelector;
 
     @FXML
-    private ImageView wormhole1;
-
-    @FXML
     private Label eventText;
 
     @FXML
@@ -44,26 +45,60 @@ public class ControllerMain implements Initializable {
     @FXML
     private StackPane timeMachineResultPane;
 
+    @FXML
+    private Button goButton;
+
+    @FXML
+    private Button goAgainButton;
+
     private Map<String, Integer> months = new HashMap<>();
 
     @FXML
     void startTimeTravel(ActionEvent event) {
 
-        if (!yearIsValid()) {
-            popupAngryMechanic();
-        }
+        boolean success = yearIsValid();
 
         LocalDate.parse("21/12/2014", DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-        RotateTransition rt = new RotateTransition(Duration.millis(3000), wormhole);
+        RotateTransition rt = new RotateTransition(Duration.millis(4000), wormhole);
         rt.setByAngle(720);
         rt.setAutoReverse(false);
         rt.setInterpolator(Interpolator.EASE_BOTH);
         rt.play();
+
+        messagePane.setOpacity(0);
+        timeMachineResultPane.setOpacity(0);
+
+        goButton.setDisable(true);
+        goButton.setDefaultButton(false);
+        goAgainButton.setDisable(true);
+        goAgainButton.setDefaultButton(true);
+
+        FadeTransition fade = new FadeTransition(Duration.millis(1000), timeMachineResultPane);
+        fade.setDelay(Duration.millis(2000));
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.setInterpolator(Interpolator.LINEAR);
+        fade.play();
+
+        fade = new FadeTransition(Duration.millis(1000), messagePane);
+        fade.setDelay(Duration.millis(3000));
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.setInterpolator(Interpolator.LINEAR);
+        fade.play();
+
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                timeMachineResultPane.setMouseTransparent(false);
+                goAgainButton.setDisable(false);
+            }
+        }, 4000);
     }
 
     @FXML
     void resetTimeMachine(ActionEvent event) {
-
+        System.out.println("hello");
     }
 
     private void popupAngryMechanic() {

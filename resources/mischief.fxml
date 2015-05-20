@@ -29,7 +29,7 @@
                               <Insets top="30.0" />
                            </VBox.margin>
 						</HBox>
-						<Button defaultButton="true" mnemonicParsing="false" onAction="#startTimeTravel" text="Go!" />
+						<Button fx:id="goButton" defaultButton="true" mnemonicParsing="false" onAction="#startTimeTravel" text="Go!" />
                      </children>
                      <StackPane.margin>
                         <Insets />
@@ -39,7 +39,7 @@
             </StackPane>
             <StackPane fx:id="timeMachineResultPane" mouseTransparent="true" opacity="0.0" prefHeight="150.0" prefWidth="200.0">
                <children>
-                  <ImageView fx:id="wormhole1" fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@time_machine_working.jpg" />
                      </image>
@@ -51,7 +51,7 @@
                               <Font name="System Bold" size="15.0" />
                            </font>
                         </Label>
-                        <Button mnemonicParsing="false" onAction="#resetTimeMachine" text="Go Again!" />
+                        <Button fx:id="goAgainButton" mnemonicParsing="false" onAction="#resetTimeMachine" text="Go Again!" />
                      </children>
                      <padding>
                         <Insets left="10.0" right="10.0" />
