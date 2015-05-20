@@ -9,7 +9,11 @@ package com.rachmie.timetravel;
  * Description to go here.
  */
 public class TimeTravelController {
+
+    private static final String XML_FILE = "/events.xml";
+
     private TimeTravelController() {
+        //TODO load up xml
     }
 
     private static TimeTravelController instance = new TimeTravelController();
@@ -18,7 +22,7 @@ public class TimeTravelController {
         return instance;
     }
 
-    public TimeEntry getTimeEntry(int month, int year) {
+    public TimeEvent getEvent(int month, int year) {
         return null;
     }
 
