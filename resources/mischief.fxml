@@ -11,20 +11,17 @@
    <center>
       <StackPane alignment="TOP_LEFT" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="wormhole" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="wormhole" fitHeight="699.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@wormhole.jpg" />
                </image>
             </ImageView>
-            <VBox alignment="CENTER" fillWidth="false" maxHeight="200.0" maxWidth="200.0" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" spacing="5.0" style="-fx-background-radius: 100; -fx-background-color: lightblue; -fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 100;" StackPane.alignment="CENTER">
+            <HBox alignment="CENTER" fillHeight="false" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" spacing="5.0" style="-fx-background-radius: 150; -fx-background-color: lightblue; -fx-border-color: grey; -fx-border-width: 4; -fx-border-radius: 150;" StackPane.alignment="CENTER">
                <children>
-                  <DatePicker fx:id="dateControl" prefWidth="150.0" />
-                  <Button defaultButton="true" mnemonicParsing="false" onAction="#startTimeTravel" text="Go!" />
+                  <ComboBox fx:id="monthSelector" prefWidth="100.0" promptText="Month" />
+                  <TextField fx:id="yearEntry" prefWidth="80.0" promptText="Year" />
                </children>
-               <padding>
-                  <Insets top="18.0" />
-               </padding>
-            </VBox>
+            </HBox>
          </children>
       </StackPane>
    </center>
