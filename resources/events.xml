@@ -45,9 +45,9 @@
     <eventSound>applause</eventSound>
   </event>
   <event>
-    <eventText>During a team meeting, a loud and suspiciously smelly noise erupts from Sean's location. No one mentions it though.</eventText>
+    <eventText>Jamie And Sean go bowling, after which jamie takes an impromptu trip to buy new trousers.</eventText>
     <eventDate>06/2015</eventDate>
-    <eventSound>wind</eventSound>
+    <eventSound></eventSound>
   </event>
   <event>
     <eventText>Rachel helps Sean out with a particularly tedious issue.... should he make a toast to the bridesmaids in his speech or is that the best mans job? </eventText>
@@ -86,8 +86,13 @@
     <eventSound></eventSound>
   </event>
   <event>
+    <eventText>During a team meeting, a loud and suspiciously smelly noise erupts from Sean's location. No one mentions it though.</eventText>
+    <eventDate>06/2016</eventDate>
+    <eventSound>wind</eventSound>
+  </event>
+  <event>
     <eventText>During his summer break, Sean develops a rash on his forearm, possibly related to the new device Tosin has been developing.</eventText>
-    <eventDate>05/2016</eventDate>
+    <eventDate>07/2016</eventDate>
     <eventSound></eventSound>
   </event>
   <event>
