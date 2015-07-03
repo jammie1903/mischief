@@ -3,8 +3,6 @@ package com.rachmie.timetravel;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
@@ -15,8 +13,6 @@ import com.thoughtworks.xstream.converters.basic.DateConverter;
 public class TimeTravelController {
 
     private static final String XML_FILE = TimeTravelController.class.getResource("/events.xml").getPath();
-
-    private final static DateFormat dateFormat = new SimpleDateFormat("MM/yyyy");
 
     private List<TimeEvent> events;
     private List<String> randomEvents;
